@@ -1,0 +1,1 @@
+<div>hello.welcome to {{<?php echo  $name;?>}}</div>
