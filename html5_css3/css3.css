@@ -1,0 +1,50 @@
+
+.one {
+    position:absolute;left:8px;
+    -webkit-transition:left .5s ease-in;
+}
+.one:hover{
+    -webkit-transition-delay:1s;
+    left: 150px;
+}
+
+
+
+.two{position:absolute;overflow:hidden;width:300px;height:150px;margin:150px 350px ;border:3px solid #eee;background:#e0e0e0;}
+.two span{opacity:0;display:block;height:50px;font:bold 14px/50px Georgia;}
+.two .a1{
+    -webkit-transform:translate(60px);
+    -webkit-animation:animations 2s ease-out;
+}
+@-webkit-keyframes animations{
+    0%{-webkit-transform:translate(0);opacity:0;}
+    50%{-webkit-transform:translate(30px);opacity:1;}
+    70%{-webkit-transform:translate(35px);opacity:1;}
+    100%{-webkit-transform:translate(60px);opacity:0;}
+}
+
+.two .a3{
+    -webkit-transform:translate(100px);
+    -webkit-animation:animations3 2s ease-out 2s;
+}
+@-webkit-keyframes animations3{
+    0%{-webkit-transform:translate(160px);opacity:0;}
+    50%{-webkit-transform:translate(130px);opacity:1;}
+    70%{-webkit-transform:translate(125px);opacity:1;}
+    100%{-webkit-transform:translate(100px);opacity:0;}
+}
+
+.two .a2{
+    text-align:center;font-size:26px;
+    -webkit-animation:animations2 5s ease-in-out 4s;
+ 
+}
+@-webkit-keyframes animations2{
+    0%{opacity:0;}
+    40%{opacity:.8;}
+    45%{opacity:.3;}
+    50%{opacity:.8;}
+    55%{opacity:.3;}
+    60%{opacity:.8;}
+    /*100%{opacity:0;}*/
+}
