@@ -11,7 +11,7 @@
 
 
 .two{position:absolute;overflow:hidden;width:300px;height:150px;margin:150px 350px ;border:3px solid #eee;background:#e0e0e0;}
-.two span{opacity:0;display:block;height:50px;font:bold 14px/50px Georgia;}
+.two span{opacity:1;display:block;height:50px;font:bold 14px/50px Georgia;}
 .two .a1{
     -webkit-transform:translate(60px);
     -webkit-animation:animations 2s ease-out;

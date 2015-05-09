@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>ppt</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<link rel="stylesheet" href="css/ppt.css">
+<style>
+.section { font: 50px "Microsoft Yahei"; color: #fff;}
+</style>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+<script>
+$(function(){
+	$('#dowebok').fullpage({
+		sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90','#FF6699','#9933FF','#9999CC','#FFCC66','#009966','#CCCC99','#00CC99','#6699FF'],
+		'navigation': true,
+        'keyboardScrolling':true,
+        anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10','page11','page12'],
+        'navigationTooltips': ['首页', 'LAMP环境', '需求分析', '数据库设计', 'MVC模式', 'Thinkphp', 'TP目录结构', '控制器', 'Ajax技术', '马上体验','dsd','第三方'],
+        'resize':true,
+        menu: '#menu',
+        'scrollOverflow':true,
+        'css3':true,
+        'verticalCentered':false,
+
+    });
+});
+</script>
+</head>
+
+<body>
+
+<div id="dowebok">
+	<div class="section section1">
+		<h3>C2C多用户商城开发</h3>
+        <div>
+            <img src="./images/me.jpg">
+         </div>
+            <pre>
+            <b>
+           班级：11级电信一班
+
+           姓名：冯强
+
+           学号:1167118113
+
+           指导教师：张超
+            </b>
+         </pre>
+
+	</div>
+	<div class="section section2">
+		<h3>LAMP服务器环境</h3>
+		<p>
+               LAMP指的Linux（操作系统）、ApacheHTTP 服务器，MySQL（有时也指MariaDB，数据库软件） 和PHP（有时也是指Perl或Python） 的第一个字母，
+           一般用来建立web应用平台。
+        </p>
+        <br>
+        <div class="advan">
+            <b id="why">Why use LAMP？</b>
+            <pre>
+                <b>
+                一.成本低廉，扩展能力好
+
+                二.部署量大，安全性高
+
+                三.灵活，稳定
+
+                四.开发门槛低，系统成型快
+                </b>
+            </pre>
+        </div>
+        <img src="./images/lamp.jpg">
+
+	</div>
+	<div class="section section3">
+		<h3>商城需求分析</h3>
+		<ul>
+            <b>
+            <li id="home">前端页面</li>
+            <li id="merchant">商家后台</li>
+            <li id="admin">商城后台</li>
+            </b>
+        </ul>
+        <div class="content">
+            <div class="home">
+                <pre>
+                    one  个人中心
+
+                    two  商品分类展示
+
+                    three  购物车
+
+                    four  订单
+
+                    five  评论
+                </pre>
+            </div>
+            <div class="merchant" style="display: none">
+                <pre>
+                    A  商家基本信息
+
+                    B  商品操作
+
+                    C  闪团商品
+
+                    D  订单发货管理
+
+                    E  评论回复
+                </pre>
+            </div>
+            <div class="admin" style="display: none;">
+                <pre>
+                    1  会员管理
+
+                    2  审核操作
+
+                    3  订单及评论
+
+                    4  商城展示操作
+
+                    5  权限管理
+
+                </pre>
+            </div>
+        </div>
+	</div>
+	<div class="section section4">
+		<h3>MySQL数据库设计</h3>
+        <div class="mysql">
+            <img src="./images/mysql.jpg" alt="数据库结构"/>
+
+        </div>
+    </div>
+    <div class="section section5">
+        <h3>MVC设计模式</h3>
+        <div class="mvc">
+            <img src="./images/mvc.jpg" alt="MVC设计模式"/>
+        </div>
+
+    </div>
+    <div class="section section6">
+        <h3>ThinkPHP</h3>
+        <p>
+            ThinkPHP是一个免费开源的，快速、简单的面向对象的轻量级PHP开发框架，遵循Apache2开源协议发布，
+        是为了敏捷WEB应用开发和简化企业应用开发而诞生的。
+        </p>
+        <p>
+            ThinkPHP从诞生以来一直秉承简洁实用的设计原则，在保持出色的性能和至简的代码的同时，也注重易用性。
+            并且拥有众多的原创功能和特性，在社区团队的积极参与下，在易用性、扩展性和性能方面不断优化和改进，众多的典型案例确保可以稳定用于商业以及门户级的开发。
+        </p>
+        <p>
+            ThinkPHP本身具有很多的原创特性，并且倡导大道至简，开发由我的开发理念，用最少的代码完成更多的功能，宗旨就是让WEB应用开发更简单、更快速。
+        </p>
+    </div>
+    <div class="section section7">
+        <h3>TP目录结构</h3>
+        <img src="images/3.jpg">
+        <pre>
+              Application
+                ├─Common         应用公共模块
+                │  ├─Common      应用公共函数目录
+                │  └─Conf        应用公共配置文件目录
+                ├─Home           默认生成的Home模块
+                │  ├─Conf        模块配置文件目录
+                │  ├─Common      模块函数公共目录
+                │  ├─Controller  模块控制器目录
+                │  ├─Model       模块模型目录
+                │  └─View        模块视图文件目录
+                ├─Runtime        运行时目录
+                │  ├─Cache       模版缓存目录
+                │  ├─Data        数据目录
+                │  ├─Logs        日志目录
+                │  └─Temp        缓存目录
+        </pre>
+    </div>
+    <div class="section section8 section3">
+        <h3>控制器 (Controller)</h3>
+        <ul>
+            <b>
+                <li id="chome">前端页面</li>
+                <li id="cmerchant">商家后台</li>
+                <li id="cadmin">商城后台</li>
+            </b>
+        </ul>
+        <div class="controller content">
+            <div class="chome">
+
+            <table width="748" border="1px solid #789">
+            <tbody>
+            <tr style="height:29px" class="firstRow">
+                <td width="119" valign="top" style="padding: 0px 7px; border-width: 1px; border-color: windowtext; ">
+                    <p style="text-indent:0;text-align:center">
+                        <span style=";font-family:宋体;font-size:16px">模块</span>
+                    </p>
+                </td>
+                <td width="173" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-width: 1px; border-top-color: windowtext; border-bottom-width: 1px; border-bottom-color: windowtext; ">
+                    <p style="text-indent:0;text-align:center">
+                        <span style=";font-family:宋体;font-size:16px">控制器类</span>
+                    </p>
+                </td>
+                <td width="151" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-width: 1px; border-top-color: windowtext; border-bottom-width: 1px; border-bottom-color: windowtext; ">
+                    <p style="text-indent:0;text-align:center">
+                        <span style=";font-family:宋体;font-size:16px">操作方法</span>
+                    </p>
+                </td>
+                <td width="306" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-width: 1px; border-top-color: windowtext; border-bottom-width: 1px; border-bottom-color: windowtext; ">
+                    <p style="text-indent:0;text-align:center">
+                        <span style=";font-family:宋体;font-size:16px">简要说明</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="119" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">首页模块</span>
+                    </p>
+                </td>
+                <td width="173" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">I</span><span style=";font-family:宋体;font-size:16px">ndex</span>
+                    </p>
+                </td>
+                <td width="151" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">I</span><span style=";font-family:宋体;font-size:16px">ndex/seek/car</span>
+                    </p>
+                </td>
+                <td width="306" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">控制index页面所有信息</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="119" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">商品列表模块</span>
+                    </p>
+                </td>
+                <td width="173" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">S</span><span style=";font-family:宋体;font-size:16px">how</span>
+                    </p>
+                </td>
+                <td width="151" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">I</span><span style=";font-family:宋体;font-size:16px">ndex</span>
+                    </p>
+                </td>
+                <td width="306" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">控制index页面所有信息</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:28px">
+                <td width="119" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">商品详情模块</span>
+                    </p>
+                </td>
+                <td width="173" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">I</span><span style=";font-family:宋体;font-size:16px">nfo</span>
+                    </p>
+                </td>
+                <td width="151" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">I</span><span style=";font-family:宋体;font-size:16px">ndex</span>
+                    </p>
+                </td>
+                <td width="306" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">控制index页面所有信息</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="119" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">专题列表(男装，女装..)</span>
+                    </p>
+                </td>
+                <td width="173" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">L</span><span style=";font-family:宋体;font-size:16px">ist</span>
+                    </p>
+                </td>
+                <td width="151" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">I</span><span style=";font-family:宋体;font-size:16px">ndex</span>
+                    </p>
+                </td>
+                <td width="306" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">控制index页面所有信息</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="119" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p>
+                        <span style=";font-family:宋体;font-size:16px">秒杀模块/闪团模块</span>
+                    </p>
+                </td>
+                <td width="173" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:24px;line-height:24px;">
+                        <span style="font-family:Symbol;font-size:13px">·&nbsp;</span><span style="font-family:宋体;font-size:16px">S</span><span style=";font-family:宋体;font-size:16px">eckill/flash</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">&nbsp;</span>
+                    </p>
+                </td>
+                <td width="151" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">I</span><span style=";font-family:宋体;font-size:16px">ndex</span>
+                    </p>
+                </td>
+                <td width="306" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">控制index页面所有信息</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="119" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">注册/登录/模块</span>
+                    </p>
+                </td>
+                <td width="173" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">R</span><span style=";font-family:宋体;font-size:16px">eg/login</span>
+                    </p>
+                </td>
+                <td width="151" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">I</span><span style=";font-family:宋体;font-size:16px">ndex</span>
+                    </p>
+                </td>
+                <td width="306" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">控制index页面所有信息</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:24px">
+                <td width="119" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">购物车模块/提交订单/成功提交订单</span>
+                    </p>
+                </td>
+                <td width="173" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">C</span><span style=";font-family:宋体;font-size:16px">ar/order/success</span>
+                    </p>
+                </td>
+                <td width="151" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">I</span><span style=";font-family:宋体;font-size:16px">ndex</span>
+                    </p>
+                </td>
+                <td width="306" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">控制index页面所有信息</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="119" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">店铺模块</span>
+                    </p>
+                </td>
+                <td width="173" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">M</span><span style=";font-family:宋体;font-size:16px">erchant</span>
+                    </p>
+                </td>
+                <td width="151" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">I</span><span style=";font-family:宋体;font-size:16px">ndex</span>
+                    </p>
+                </td>
+                <td width="306" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">控制index页面所有信息</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="119" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">个人中心模块</span>
+                    </p>
+                </td>
+                <td width="173" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">P</span><span style=";font-family:宋体;font-size:16px">ersonal</span>
+                    </p>
+                </td>
+                <td width="151" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">I</span><span style=";font-family:宋体;font-size:16px">ndex</span>
+                    </p>
+                </td>
+                <td width="306" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">控制index页面所有信息</span>
+                    </p>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+            <p>
+                <br/>
+            </p>
+
+            </div>
+            <div class="cmerchant" style="display:none">
+            <table width="748">
+            <tbody>
+            <tr style="height:29px" class="firstRow">
+                <td width="104" valign="top" style="padding: 0px 7px; border-width: 1px; border-color: windowtext;  ">
+                    <p style="text-indent:37px">
+                        <span style=";font-family:宋体;font-size:16px">模块</span>
+                    </p>
+                </td>
+                <td width="130" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-width: 1px; border-top-color: windowtext; border-bottom-width: 1px; border-bottom-color: windowtext;  ">
+                    <p style="text-indent:0;text-align:center">
+                        <span style=";font-family:宋体;font-size:16px">控制器类</span>
+                    </p>
+                </td>
+                <td width="266" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-width: 1px; border-top-color: windowtext; border-bottom-width: 1px; border-bottom-color: windowtext;  ">
+                    <p style="text-indent:0;text-align:center">
+                        <span style=";font-family:宋体;font-size:16px">操作方法</span>
+                    </p>
+                </td>
+                <td width="248" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-width: 1px; border-top-color: windowtext; border-bottom-width: 1px; border-bottom-color: windowtext;  ">
+                    <p style="text-indent:0;text-align:center">
+                        <span style=";font-family:宋体;font-size:16px">简要说明</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:21px">
+                <td width="104" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">登陆注册管理</span>
+                    </p>
+                </td>
+                <td width="130" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-weight:bold;font-size:16px">LoginReg</span>
+                    </p>
+                </td>
+                <td width="266" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">login()</span>
+                    </p>
+                </td>
+                <td width="248" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">获取登录界面</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:20px">
+                <td width="104" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="130" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="266" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">reg()</span>
+                    </p>
+                </td>
+                <td width="248" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">获取注册界面</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:19px">
+                <td width="104" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">信息配置管理</span>
+                    </p>
+                </td>
+                <td width="130" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-weight:bold;font-size:16px">InfoSettings</span>
+                    </p>
+                </td>
+                <td width="266" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">basicInformation()</span>
+                    </p>
+                </td>
+                <td width="248" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">基本信息</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:23px">
+                <td width="104" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="130" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="266" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">shopInfo()</span>
+                    </p>
+                </td>
+                <td width="248" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">店铺介绍</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:24px">
+                <td width="104" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="130" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="266" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">goodsClassify</span><span style=";font-family:宋体;font-size:16px">()</span>
+                    </p>
+                </td>
+                <td width="248" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">商品分类</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:21px">
+                <td width="104" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="130" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="266" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">changePass</span><span style=";font-family:宋体;font-size:16px">()</span>
+                    </p>
+                </td>
+                <td width="248" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">密码修改</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:15px">
+                <td width="104" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="130" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="266" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">shopLogo</span><span style=";font-family:宋体;font-size:16px">()</span>
+                    </p>
+                </td>
+                <td width="248" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">店铺logo上传</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:24px">
+                <td width="104" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">商品管理</span>
+                    </p>
+                </td>
+                <td width="130" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-weight:bold;font-size:16px">goodsAction</span>
+                    </p>
+                </td>
+                <td width="266" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">addGoods</span><span style=";font-family:宋体;font-size:16px">()</span>
+                    </p>
+                </td>
+                <td width="248" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">添加商品</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:17px">
+                <td width="104" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="130" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="266" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">goodsMana</span><span style=";font-family:宋体;font-size:16px">()</span>
+                    </p>
+                </td>
+                <td width="248" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:61px">
+                        <span style=";font-family:宋体;font-size:16px">&nbsp;商品管理</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:22px">
+                <td width="104" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">订单管理</span>
+                    </p>
+                </td>
+                <td width="130" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-weight:bold;font-size:16px">Orders</span>
+                    </p>
+                </td>
+                <td width="266" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">effectiveOrder</span><span style=";font-family:宋体;font-size:16px">()</span>
+                    </p>
+                </td>
+                <td width="248" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">有效订单</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:19px">
+                <td width="104" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="130" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="266" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">wasteOrder</span><span style=";font-family:宋体;font-size:16px">()</span>
+                    </p>
+                </td>
+                <td width="248" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">会员废单</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:23px">
+                <td width="104" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">附属管理</span>
+                    </p>
+                </td>
+                <td width="130" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-weight:bold;font-size:16px">Accessory</span>
+                    </p>
+                </td>
+                <td width="266" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">notMessage</span><span style=";font-family:宋体;font-size:16px">()</span>
+                    </p>
+                </td>
+                <td width="248" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">未回复留言</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:20px">
+                <td width="104" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="130" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="266" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">searchMessage</span><span style=";font-family:宋体;font-size:16px">()</span>
+                    </p>
+                </td>
+                <td width="248" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">留言查询</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:23px">
+                <td width="104" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">商城与开发人员宣传</span>
+                    </p>
+                </td>
+                <td width="130" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p>
+                        <span style=";font-family:宋体;font-weight:bold;font-size:16px">Index</span>
+                    </p>
+                    <p>
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">&nbsp;</span>
+                    </p>
+                </td>
+                <td width="266" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">I</span><span style=";font-family:宋体;font-size:16px">ndex()</span>
+                    </p>
+                </td>
+                <td width="248" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">商铺首页</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:31px">
+                <td width="104" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="130" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="266" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">OurGroup()</span>
+                    </p>
+                </td>
+                <td width="248" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="margin-left:56px;text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">开发小组介绍</span>
+                    </p>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+            <p>
+                <br/>
+            </p>
+
+            </div>
+            <div class="cadmin" style="display:none">
+            <table width="748">
+            <tbody>
+            <tr style="height:29px" class="firstRow">
+                <td width="132" valign="top" style="padding: 0px 7px; border-width: 1px; border-color: windowtext;  ">
+                    <p style="text-indent:0;text-align:center">
+                        <span style=";font-family:宋体;font-size:16px">模块</span>
+                    </p>
+                </td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-width: 1px; border-top-color: windowtext; border-bottom-width: 1px; border-bottom-color: windowtext;  ">
+                    <p style="text-indent:0;text-align:center">
+                        <span style=";font-family:宋体;font-size:16px">控制器类</span>
+                    </p>
+                </td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-width: 1px; border-top-color: windowtext; border-bottom-width: 1px; border-bottom-color: windowtext;  ">
+                    <p style="text-indent:0;text-align:center">
+                        <span style=";font-family:宋体;font-size:16px">操作方法</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-width: 1px; border-top-color: windowtext; border-bottom-width: 1px; border-bottom-color: windowtext;  ">
+                    <p style="text-indent:0;text-align:center">
+                        <span style=";font-family:宋体;font-size:16px">简要说明</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">登陆管理</span>
+                    </p>
+                </td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-weight:bold;font-size:16px">Login</span>
+                    </p>
+                </td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">login()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">获取登录页面的操作</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">loginDo()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">处理登录操作</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:28px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">exits()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">用户退出操作</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">code()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">获取验证码</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">操作页面管理</span>
+                    </p>
+                </td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">I</span><span style=";font-family:宋体;font-weight:bold;font-size:16px">ndex</span>
+                    </p>
+                </td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">main()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">获取后台主页</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">top()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">获取主页顶部分帧页面</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">常规管理</span>
+                    </p>
+                </td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-weight:bold;font-size:16px">Base</span>
+                    </p>
+                </td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">sysinfo()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">获取网站服务器信息</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">getIp()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">获取登录IP</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">会员管理</span>
+                    </p>
+                </td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">M</span><span style=";font-family:宋体;font-weight:bold;font-size:16px">ember</span>
+                    </p>
+                </td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">select()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">查询会员</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">edit()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">修改会员信息</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">delete()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">删除会员信息</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">商品分类管理</span>
+                    </p>
+                </td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-weight:bold;font-size:16px">Sort</span>
+                    </p>
+                </td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">addFirstSort()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">添加一级分类</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">addSecondSort()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">添加二级分类</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">addThirdSort()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">添加三级分类</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">addSortDo()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">分类提交处理</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">店铺管理</span>
+                    </p>
+                </td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">S</span><span style=";font-family:宋体;font-weight:bold;font-size:16px">hop</span>
+                    </p>
+                </td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">select()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">查询店铺</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">delete()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">删除店铺</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">edit()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">修改店铺状态</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">订单管理</span>
+                    </p>
+                </td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">O</span><span style=";font-family:宋体;font-weight:bold;font-size:16px">rders</span>
+                    </p>
+                </td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">select()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">浏览订单</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">edit()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">处理紧急订单</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">审核管理</span>
+                    </p>
+                </td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-weight:bold;font-size:16px">Check</span>
+                    </p>
+                </td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">goods()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">审核商品</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">seckill()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">审核秒杀</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">group()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">审核闪团</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">shop()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">审核商铺</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">评论管理</span>
+                    </p>
+                </td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">&nbsp;</span>
+                    </p>
+                    <p style="text-indent:0">
+                        <span style="font-family:宋体;font-weight:bold;font-size:16px">C</span><span style=";font-family:宋体;font-weight:bold;font-size:16px">omment</span>
+                    </p>
+                </td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">select()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">查询评论</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">edit()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">修改恶意评论</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:29px">
+                <td width="132" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="141" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"></td>
+                <td width="154" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">delete()</span>
+                    </p>
+                </td>
+                <td width="321" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;">
+                    <p style="text-indent:0">
+                        <span style=";font-family:宋体;font-size:16px">删除恶意评论</span>
+                    </p>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+            <p>
+                <br/>
+            </p>
+            </div>
+        </div>
+    </div>
+    <div class="section section9">
+        <h3>异步加载</h3>
+        <pre>
+            <b>
+            &ltscript&gt
+            $.post("__MOUDLE_/Orders/totalorders", { "pretime": onetime, "nexttime": twotime } );
+            &lt/script&gt
+
+
+            &lt?php
+                namespace Merchant\Controller;
+                use Think\Controller;
+                class OrdersController extends Controller{
+                    public function totalorders(){
+                    $sale = M('saleuser');
+                    $name['username'] = $_SESSION['salename'];
+                    $re = $sale -> where($name) -> select();
+                    $order = M('orders');
+                    //输出日期内订单收入
+
+                    if($_POST){
+                        $time=$_POST;
+
+                        $start=strtotime($time->onetime);
+                        $end=strtotime($time->twotime);
+
+                        $da=$order-> where("shopid={$re[0]['id']} and status=2 and addtime<{$end} and addtime>{$start}")
+                                                                                             ->field('total')->select();
+
+                        $str='';
+                        foreach($da as $key){
+                            $str=$str+$key['total'];
+                        }
+                        echo $str;
+
+                    }
+		        }
+            ?&gt
+            </b>
+        </pre>
+    </div>
+    <div class="section">
+        <h3>第四屏</h3>
+        <p>这是最后一屏</p>
+    </div>
+    <div class="section">
+        <h3>第四屏</h3>
+        <p>这是最后一屏</p>
+    </div>
+    <div class="section">
+        <h3>第四屏</h3>
+        <p>这是最后一屏</p>
+    </div>
+
+
+</div>
+
+
+
+
+
+<a href="http://www.dowebok.com/" style="display: none;">dowebok</a>
+<a href="http://www.dowebok.com/77.html" style="display: none;">jQuery全屏滚动插件fullPage.js</a>
+
+</body>
+<script>
+    $("#why").click(function(){
+        $(".section2 pre").toggle();
+    })
+    $(".section3 ul li:nth-child(1)").addClass('need')
+    $(".section3 ul li").click(function(){
+        $(this).addClass('need').siblings().removeClass('need');
+        var name = $(this).attr('id');
+        $('.'+name).show().siblings().hide();
+    })
+    $(function(){
+
+        var flag = 0;
+        if(flag == 0){
+            $("#fp-nav li:nth-child(6)").click(function(){
+
+
+                $(".section6 p:nth-child(1)").removeClass('a1')
+                $(".section6 p:nth-child(2)").removeClass('a2')
+                $(".section6 p:nth-child(3)").removeClass('a3')
+
+                $(".section6 p:nth-child(1)").addClass('a1')
+                $(".section6 p:nth-child(2)").addClass('a2')
+                $(".section6 p:nth-child(3)").addClass('a3')
+
+                flag = 1;
+                console.log(flag);
+                if(flag == 1){
+                    flag = 0;
+                }
+                console.log(flag);
+            })
+        }
+
+
+
+    })
+</script>
+</html>
